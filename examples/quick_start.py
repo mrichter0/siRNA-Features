@@ -46,7 +46,6 @@ def main():
     print("\nFeature Importance:")
     print(importance.head())
     
-    # Make predictions on new data
     predictions = model.predict(features_df)
     print("\nPredictions:")
     print(predictions)
