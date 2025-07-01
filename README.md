@@ -91,7 +91,7 @@ model.train()
 ## Datasets
 
 The datasets used in this study are available at:
-- RNA-Seq dataset: [Dataset Link]
+- RNA-Seq dataset: [Dataset Link](https://github.com/mrichter0/siRNA-Features/blob/main/data/6048D_rawCounts2.txt)
 - Processed features: [Features Link](https://binghamton-my.sharepoint.com/:u:/g/personal/mrichte3_binghamton_edu/EbXq_8BXbx5Ni-6pfzaYEecBth-tEwPrjvfDZ1J_QlviEg?e=9LmXRA)
 - Pre-trained models: [Models Link]
 
