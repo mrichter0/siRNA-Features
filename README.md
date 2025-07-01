@@ -1,3 +1,5 @@
+[Datasets are now available at this link](https://binghamton-my.sharepoint.com/:u:/g/personal/mrichte3_binghamton_edu/EbXq_8BXbx5Ni-6pfzaYEecBth-tEwPrjvfDZ1J_QlviEg?e=9LmXRA)
+
 # siRNA-Features
 
 This repository contains the code and data accompanying the paper "siRNA Features - Reproducible Structure-Based Chemical Features for Off-Target Prediction".
