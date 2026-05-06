@@ -16,7 +16,7 @@ Last updated: **2026-05-06 11:17 EDT**
 
 ![Figure 6 stack level and time optimization](.github/assets/figure6_stack_time.png)
 
-![Figure 1 workflow](.github/assets/figure1_workflow.png)
+![Figure 1 workflow](.github/assets/figure1_workflow_clean.png)
 
 Live entry points for the workflow:
 - [Landing page](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/)
