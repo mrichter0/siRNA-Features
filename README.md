@@ -21,6 +21,29 @@ On the landing page, enter a dataset id or `G` / `T`:
 - [Gromacs notebook](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/gromacs_pipeline.ipynb)
 - [Training notebook](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/training_pipeline.ipynb)
 
+## Repository layout
+
+This GitHub root now mirrors the lightweight notebook-facing subset of the live Jetstream `sirna-features` directory:
+
+```text
+sirna-features/
+|-- dataset0/
+|-- dataset1/
+|-- dataset2/
+|-- dataset3/
+|-- dataset4/
+|-- dataset6_7/
+|-- gromacs/
+|-- shared_data/
+|-- training/
+|-- README.md
+|-- LICENSE
+|-- .gitignore
+`-- .github/assets/
+```
+
+Large generated data trees with thousands of files are intentionally omitted from GitHub and remain on Jetstream only.
+
 ## Table 1
 
 The table below follows manuscript Table 1, with an added live notebook link column.
@@ -41,7 +64,7 @@ The table below follows manuscript Table 1, with an added live notebook link col
 
 Published Figure 1 from the manuscript:
 
-![Figure 1 workflow](assets/figure1_workflow.png)
+![Figure 1 workflow](.github/assets/figure1_workflow.png)
 
 Live entry points for the workflow:
 - [Landing page](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/)
@@ -52,7 +75,7 @@ Live entry points for the workflow:
 
 Published Figure 6 from the manuscript:
 
-![Figure 6 stack level and time optimization](assets/figure6_stack_time.png)
+![Figure 6 stack level and time optimization](.github/assets/figure6_stack_time.png)
 
 These values follow Supplementary Table 5, which corresponds to manuscript Figure 6.
 
@@ -63,13 +86,6 @@ These values follow Supplementary Table 5, which corresponds to manuscript Figur
 | 3 | 5836 | 0.784 | 295 | 5 | [Dataset 3](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_3_pipeline.ipynb) | [Training](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/training_pipeline.ipynb) |
 | 7R | 4389 | 0.736 | 780 | 4 | [Dataset 6/7](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_6_7_pipeline.ipynb) | [Training](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/training_pipeline.ipynb) |
 | 7N | 7414 | 0.729 | 980 | 4 | [Dataset 6/7](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_6_7_pipeline.ipynb) | [Training](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/training_pipeline.ipynb) |
-
-## GitHub mirror scope
-
-This GitHub copy is intentionally Jetstream-first:
-- the notebooks and small support assets live here
-- the large data and live runnable environment live on Jetstream
-- directories with thousands of generated files are intentionally omitted from GitHub
 
 ## Citation
 

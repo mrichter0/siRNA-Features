@@ -1,0 +1,27 @@
+{
+  "sample_gene": "ENSG00000000419",
+  "sample_source_files": {
+    "unmod_cif": "/media/volume/sirna-features/shared_data/RNASeq/output_cifs/ENSG00000000419.cif",
+    "amide_pdb": "/media/volume/sirna-features/shared_data/RNASeq/md0/4f3t_v4G2c.pdb",
+    "gna_cif": "/media/volume/sirna-features/shared_data/RNASeq/md0/5v2h.cif"
+  },
+  "sample_outputs": {
+    "unmod": "/media/volume/sirna-features/gromacs/sample_unmod_from_cif.pdb",
+    "amide": "/media/volume/sirna-features/gromacs/sample_amide_from_cif.pdb",
+    "gna": "/media/volume/sirna-features/gromacs/sample_gna_from_cif.pdb"
+  },
+  "mdp_files": [
+    "ions.mdp",
+    "step4.0_minimization.mdp",
+    "step5_production.mdp"
+  ],
+  "amber_files": [
+    "topol.top",
+    "topol_Protein_chain_A.itp",
+    "topol_RNA_chain_B.itp",
+    "topol_RNA_chain_C.itp",
+    "posre_Protein_chain_A.itp",
+    "posre_RNA_chain_B.itp",
+    "posre_RNA_chain_C.itp"
+  ]
+}
