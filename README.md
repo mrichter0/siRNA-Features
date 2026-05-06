@@ -1,5 +1,5 @@
 Last updated: **2026-05-06 11:17 EDT** 
-# The live data and runnable notebooks for this project are hosted on Jetstream at [http://4.bio250293.projects.jetstream-cloud.org/sirna-features/](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/). On the landing page, enter a dataset id (0-7) or `G` / `T`.
+# All notebooks have been rewritten for clarity and separated by dataset. All data including modified cif files and post-minimization gros are now hosted live with runnable notebooks at [http://4.bio250293.projects.jetstream-cloud.org/sirna-features/](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/). On the landing page, enter a dataset id (0-7) or `G` / `T`.
 
 | Dataset | Description | Key features | Features | Ref. | Live notebook |
 | --- | --- | --- | ---: | --- | --- |
