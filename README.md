@@ -1,129 +1,91 @@
-[Datasets are now available at this link](https://binghamton-my.sharepoint.com/:u:/g/personal/mrichte3_binghamton_edu/EbXq_8BXbx5Ni-6pfzaYEecBth-tEwPrjvfDZ1J_QlviEg?e=9LmXRA)
+# Live Jetstream notebooks
 
-# siRNA-Features
+Last updated: **2026-05-06 11:08 EDT**
 
-This repository contains the code and data accompanying the paper "siRNA Features - Reproducible Structure-Based Chemical Features for Off-Target Prediction".
+The live data and runnable notebooks for this project are hosted on Jetstream at [http://4.bio250293.projects.jetstream-cloud.org/sirna-features/](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/).
 
-[![Paper](https://img.shields.io/badge/paper-link-blue)](paper_link)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+On the landing page, enter a dataset id or `G` / `T`:
+- `0`, `1`, `2`, `3`, `4`
+- `6N`, `6R`, `7N`, `7R`
+- `G` for the Gromacs notebook
+- `T` for the AutoGluon training notebook
 
-## Overview
+## Direct notebook links
 
-This project introduces a framework for generating reproducible structure-based chemical features for siRNA, incorporating both molecular fingerprints and computationally derived siRNA-AGO2 complex structures. The framework enables better prediction of off-target effects in siRNA therapeutics through advanced feature engineering and machine learning approaches.
+- [Dataset 0 notebook](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_0_pipeline.ipynb)
+- [Dataset 1 notebook](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_1_pipeline.ipynb)
+- [Dataset 2 notebook](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_2_pipeline.ipynb)
+- [Dataset 3 notebook](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_3_pipeline.ipynb)
+- [Dataset 4 notebook](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_4_pipeline.ipynb)
+- [Dataset 6/7 notebook](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_6_7_pipeline.ipynb)
+- [Gromacs notebook](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/gromacs_pipeline.ipynb)
+- [Training notebook](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/training_pipeline.ipynb)
 
-## Key Features
+## Table 1
 
-- Structural prediction and modeling of siRNA-AGO2 complexes
-- Extended Connectivity Fingerprint (ECFP) generation for siRNA modifications
-- Multiple feature representation strategies (9 distinct datasets)
-- Machine learning pipeline using AutoGluon
-- Reproducible molecular dynamics simulations
+The table below follows manuscript Table 1, with an added live notebook link column.
 
-## Installation
+| Dataset | Description | Key features | Features | Ref. | Live notebook |
+| --- | --- | --- | ---: | --- | --- |
+| 0 | Distances calculated after modeling siRNA structures with chemical modifications. | Two molecular fingerprints containing dinucleotide at positions 3-4 and a monomer at position 7; distances calculated after trajectories. | 896 | 4f3t | [Dataset 0](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_0_pipeline.ipynb) |
+| 1 | After modeling, full xyz coordinates of each residue stored as features. | Coordinates of all protein and RNA residues; no fingerprints; trajectories. | 2637 | 4f3t | [Dataset 1](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_1_pipeline.ipynb) |
+| 2 | Simple RNA encoding of guide strand and predicted target with numerical modification indicators. | Encodings: A = 1, C = 2, G = 3, U = 4, dimer = 5-6, monomer = 7. | 42 | None | [Dataset 2](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_2_pipeline.ipynb) |
+| 3 | Extended Connectivity Fingerprints (ECFPs) from guide strand and target sequences from alignments. | As Dataset 2, using fingerprints rather than simple numerical encoding. | 1344 | None | [Dataset 3](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_3_pipeline.ipynb) |
+| 4 | Gene index data used as features; same fingerprints as Dataset 0. | Ensembl IDs as uint8 (gene index 0-2); fingerprints for positions 3-4, 7. | 99 | None | [Dataset 4](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_4_pipeline.ipynb) |
+| 6N | Distances from minimized structures; pre-modeled structure used as reference. | Distances from pre-modeled base structure; RNA distances included. | 879 | Base | [Dataset 6/7](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_6_7_pipeline.ipynb) |
+| 6R | As 6N but rescaled (0-255 range normalization). | Rescaled distances for comparability. | 842 | Base | [Dataset 6/7](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_6_7_pipeline.ipynb) |
+| 7N | Distances from minimized structures; literature reference used. | Distances from the literature reference; no RNA distances. | 837 | 4f3t | [Dataset 6/7](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_6_7_pipeline.ipynb) |
+| 7R | Same as 7N but rescaled. | Rescaled distances for comparability. | 800 | 4f3t | [Dataset 6/7](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_6_7_pipeline.ipynb) |
 
-```bash
-# Clone the repository
-git clone https://github.com/username/siRNA-Features.git
-cd siRNA-Features
+## Figure 1 workflow
 
-# Create and activate a conda environment
-conda create -n sirna_features python=3.8
-conda activate sirna_features
+This mirrors the Figure 1 caption from the manuscript and points back to the live Jetstream notebooks.
 
-# Install dependencies
-pip install -r requirements.txt
+```mermaid
+flowchart LR
+    A["Experimental phase<br/>Chemically modified siRNA production<br/>RNA-Seq data collection"]
+    B["Bioinformatics phase<br/>Alignment<br/>Structural prediction<br/>Molecular modeling<br/>Dynamics<br/>Nine distinct datasets"]
+    C["Machine learning phase<br/>Initial TensorFlow tests<br/>AutoGluon optimization"]
+    A --> B --> C
 ```
 
-## Project Structure
+Live entry points for the workflow:
+- [Landing page](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/)
+- [Gromacs notebook](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/gromacs_pipeline.ipynb)
+- [Training notebook](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/training_pipeline.ipynb)
 
-```
-siRNA-Features/
-├── data/                    # Dataset storage
-│   ├── raw/                # Raw RNA-Seq data
-│   └── processed/          # Processed features and results
-├── docs/                   # Documentation
-├── models/                 # Trained models
-├── notebooks/             # Jupyter notebooks
-│   ├── RNASeq/            # RNA-Seq analysis notebooks
-│   ├── alignments/        # Structure alignment notebooks
-│   └── modifications/     # Chemical modification notebooks
-├── src/                   # Source code
-│   ├── features/          # Feature generation
-│   ├── models/           # Model training and evaluation
-│   └── utils/            # Utility functions
-├── tests/                # Unit tests
-├── LICENSE
-└── README.md
-```
+## Figure 6 results
 
-## Usage
+These values follow Supplementary Table 5, which corresponds to manuscript Figure 6.
 
-### Feature Generation
+| Dataset ID | Seed | PRC AUC | Time (s) | Stack level | Live dataset notebook | Training notebook |
+| --- | ---: | ---: | ---: | ---: | --- | --- |
+| 3 | 2162 | 0.785 | 370 | 6 | [Dataset 3](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_3_pipeline.ipynb) | [Training](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/training_pipeline.ipynb) |
+| 3 | 5836 | 0.783 | 355 | 6 | [Dataset 3](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_3_pipeline.ipynb) | [Training](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/training_pipeline.ipynb) |
+| 3 | 5836 | 0.784 | 295 | 5 | [Dataset 3](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_3_pipeline.ipynb) | [Training](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/training_pipeline.ipynb) |
+| 7R | 4389 | 0.736 | 780 | 4 | [Dataset 6/7](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_6_7_pipeline.ipynb) | [Training](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/training_pipeline.ipynb) |
+| 7N | 7414 | 0.729 | 980 | 4 | [Dataset 6/7](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_6_7_pipeline.ipynb) | [Training](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/training_pipeline.ipynb) |
 
-1. **Structural Prediction**:
-```python
-from src.features import structural_prediction
-model = structural_prediction.ChaiDiscovery()
-structure = model.predict_structure(sequence)
-```
+## GitHub mirror scope
 
-2. **ECFP Generation**:
-```python
-from src.features import fingerprints
-ecfps = fingerprints.generate_ecfp(molecule, nbits=512, radius=2)
-```
-
-3. **Dataset Creation**:
-```python
-from src.features import dataset_builder
-dataset = dataset_builder.create_dataset(structure, ecfps, type="dataset3")
-```
-
-### Model Training
-
-```python
-from src.models import training
-model = training.AutoGluonTrainer(dataset)
-model.train()
-```
-
-## Datasets
-
-The datasets used in this study are available at:
-- RNA-Seq dataset: [Dataset Link](https://github.com/mrichter0/siRNA-Features/blob/main/data/6048D_rawCounts2.txt)
-- Processed features: [Features Link](https://binghamton-my.sharepoint.com/:u:/g/personal/mrichte3_binghamton_edu/EbXq_8BXbx5Ni-6pfzaYEecBth-tEwPrjvfDZ1J_QlviEg?e=9LmXRA)
-- Pre-trained models: [Models Link]
-
-## Results
-
-Our framework achieved:
-- AUPRC scores up to 0.784 (Dataset 3)
-- Robust performance across multiple feature representations
-- Reproducible structural predictions
+This GitHub copy is intentionally Jetstream-first:
+- the notebooks and small support assets live here
+- the large data and live runnable environment live on Jetstream
+- directories with thousands of generated files are intentionally omitted from GitHub
 
 ## Citation
 
-If you use this code or find our work helpful, please cite:
+If you use this work, please cite:
 
 ```bibtex
-@article{richter2024sirna,
-  title={siRNA Features - Reproducible Structure-Based Chemical Features for Off-Target Prediction},
-  author={Richter, Michael and Admasub, Alem},
-  journal={Journal Name},
-  year={2024}
+@article{richter2025sirnafeatures,
+  title={siRNA Features-Automated Machine Learning of 3D Molecular Fingerprints and Structures for Therapeutic Off-Target Data},
+  author={Richter, Michael and Admasu, Alem},
+  journal={International Journal of Molecular Sciences},
+  volume={26},
+  number={14},
+  pages={6795},
+  year={2025},
+  doi={10.3390/ijms26146795}
 }
 ```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contributing
-
-We welcome contributions! Please see our [contributing guidelines](CONTRIBUTING.md) for details.
-
-## Contact
-
-- Michael Richter - richter@binghamton.edu
-- Alem Admasub - alem@rutgers.edu
