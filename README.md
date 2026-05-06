@@ -14,7 +14,11 @@ Last updated: **2026-05-06 11:17 EDT**
 | 7R | Same as 7N but rescaled. | Rescaled distances for comparability. | 800 | 4f3t | [Dataset 6/7](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/dataset_6_7_pipeline.ipynb) |
 
 
+Dataset 3, which uses ECFPs to encode siRNA and target features, is the current best-performing approach, while the minimized structural datasets still showed strong promise and could likely improve further with continued refinement.
+
 ![Figure 6 stack level and time optimization](.github/assets/figure6_stack_time.png)
+
+The workflow consisted of three phases: experimental, bioinformatics, and machine learning, combining chemically modified siRNA production and RNA-Seq collection with structural prediction, molecular modeling, dynamics, and AutoGluon optimization.
 
 ![Figure 1 workflow](.github/assets/figure1_workflow_clean.png)
 
