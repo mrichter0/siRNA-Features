@@ -1,6 +1,6 @@
 # Live Jetstream notebooks
 
-Last updated: **2026-05-06 11:08 EDT**
+Last updated: **2026-05-06 11:17 EDT**
 
 The live data and runnable notebooks for this project are hosted on Jetstream at [http://4.bio250293.projects.jetstream-cloud.org/sirna-features/](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/).
 
@@ -39,15 +39,9 @@ The table below follows manuscript Table 1, with an added live notebook link col
 
 ## Figure 1 workflow
 
-This mirrors the Figure 1 caption from the manuscript and points back to the live Jetstream notebooks.
+Published Figure 1 from the manuscript:
 
-```mermaid
-flowchart LR
-    A["Experimental phase<br/>Chemically modified siRNA production<br/>RNA-Seq data collection"]
-    B["Bioinformatics phase<br/>Alignment<br/>Structural prediction<br/>Molecular modeling<br/>Dynamics<br/>Nine distinct datasets"]
-    C["Machine learning phase<br/>Initial TensorFlow tests<br/>AutoGluon optimization"]
-    A --> B --> C
-```
+![Figure 1 workflow](assets/figure1_workflow.png)
 
 Live entry points for the workflow:
 - [Landing page](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/)
@@ -55,6 +49,10 @@ Live entry points for the workflow:
 - [Training notebook](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/training_pipeline.ipynb)
 
 ## Figure 6 results
+
+Published Figure 6 from the manuscript:
+
+![Figure 6 stack level and time optimization](assets/figure6_stack_time.png)
 
 These values follow Supplementary Table 5, which corresponds to manuscript Figure 6.
 
