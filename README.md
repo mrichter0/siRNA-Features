@@ -22,10 +22,6 @@ The workflow consisted of three phases: experimental, bioinformatics, and machin
 
 ![Figure 1 workflow](.github/assets/figure1_workflow_clean.png)
 
-Live entry points for the workflow:
-- [Landing page](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/)
-- [Gromacs notebook](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/gromacs_pipeline.ipynb)
-- [Training notebook](http://4.bio250293.projects.jetstream-cloud.org/sirna-features/jupyter/notebooks/training_pipeline.ipynb)
 
 ## Citation
 
