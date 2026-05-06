@@ -1,0 +1,66 @@
+CRYST1   79.029   31.901   33.782  90.00  90.46  90.00 C 1 2 1       1
+HETATM    1  P   ZTH A   5       6.431  -6.811  16.816  1.00 10.60      A    P  
+ANISOU    1  P   ZTH A   5     1851   1479    700   -131    -84   -314  A    P  
+HETATM    2  O1P ZTH A   5       5.448  -7.864  16.450  1.00 12.04      A    O  
+ANISOU    2  O1P ZTH A   5     1875   1863    839   -160    -54   -501  A    O  
+HETATM    3  O2P ZTH A   5       6.512  -5.556  16.037  1.00 12.42      A    O  
+ANISOU    3  O2P ZTH A   5     1927   1740   1053    -60   -129    119  A    O  
+HETATM    4  C1G ZTH A   5       7.302  -6.579  21.158  1.00  9.17      A    C  
+ANISOU    4  C1G ZTH A   5     1746   1026    714   -181    -93   -196  A    C  
+HETATM    5  N1  ZTH A   5       7.308  -6.106  22.558  1.00  7.87      A    N  
+ANISOU    5  N1  ZTH A   5     1696    587    708   -128    -82    -59  A    N  
+HETATM    6  C2  ZTH A   5       7.477  -4.798  22.830  1.00  7.22      A    C  
+ANISOU    6  C2  ZTH A   5     1638    553    553   -180   -118     84  A    C  
+HETATM    7  C2G ZTH A   5       5.843  -6.704  20.634  1.00  8.90      A    C  
+ANISOU    7  C2G ZTH A   5     1789    976    618   -107    -36   -141  A    C  
+HETATM    8  O2  ZTH A   5       7.663  -3.933  21.966  1.00  7.62      A    O  
+ANISOU    8  O2  ZTH A   5     1595    728    572   -193   -117    -40  A    O  
+HETATM    9  O2G ZTH A   5       5.078  -7.582  21.474  1.00  8.73      A    O  
+ANISOU    9  O2G ZTH A   5     1711    721    885     -4    137   -203  A    O  
+HETATM   10  C3G ZTH A   5       5.806  -7.339  19.264  1.00  9.13      A    C  
+ANISOU   10  C3G ZTH A   5     1858    814    797   -121   -103    -79  A    C  
+HETATM   11  N3  ZTH A   5       7.451  -4.413  24.163  1.00  7.13      A    N  
+ANISOU   11  N3  ZTH A   5     1687    450    571    -66   -182     11  A    N  
+HETATM   12  O3G ZTH A   5       6.313  -6.384  18.352  1.00  9.87      A    O  
+ANISOU   12  O3G ZTH A   5     1848   1063    839   -139    -95    -97  A    O  
+HETATM   13  C4  ZTH A   5       7.244  -5.310  25.210  1.00  7.39      A    C  
+ANISOU   13  C4  ZTH A   5     1725    456    625    -73   -301     20  A    C  
+HETATM   14  O4  ZTH A   5       7.226  -4.825  26.348  1.00  7.87      A    O  
+ANISOU   14  O4  ZTH A   5     1727    652    611    -87   -307     34  A    O  
+HETATM   15  C5  ZTH A   5       7.079  -6.670  24.927  1.00  7.91      A    C  
+ANISOU   15  C5  ZTH A   5     1716    509    780   -108   -239    143  A    C  
+HETATM   16  C6  ZTH A   5       7.112  -7.045  23.584  1.00  8.28      A    C  
+ANISOU   16  C6  ZTH A   5     1741    626    779   -161   -178     45  A    C  
+HETATM   17  H3  ZTH A   5       7.570  -3.445  24.381  1.00  8.55      A    H  
+HETATM   18  H6  ZTH A   5       6.968  -8.093  23.322  1.00  9.93      A    H  
+HETATM   19  H01 ZTH A   5       6.931  -7.404  25.719  1.00  7.91      A    H  
+HETATM   20  H2G ZTH A   5       5.369  -5.724  20.604  1.00 10.68      A    H  
+HETATM   21 H1G1 ZTH A   5       7.848  -5.888  20.517  1.00 11.01      A    H  
+HETATM   22 H1G2 ZTH A   5       7.770  -7.560  21.092  1.00 11.01      A    H  
+HETATM   23 H3G1 ZTH A   5       4.846  -7.481  18.870  1.00 10.96      A    H  
+HETATM   24 H3G2 ZTH A   5       6.476  -8.132  19.122  1.00 10.96      A    H  
+CONECT    1    2    3   12
+CONECT    2    1
+CONECT    3    1
+CONECT    4    5    7   21   22
+CONECT    5    4    6   16
+CONECT    6    5    8   11
+CONECT    7    4    9   10   20
+CONECT    8    6
+CONECT    9    7
+CONECT   10    7   12   23   24
+CONECT   11    6   13   17
+CONECT   12    1   10
+CONECT   13   11   14   15
+CONECT   14   13
+CONECT   15   13   16   19
+CONECT   16    5   15   18
+CONECT   17   11
+CONECT   18   16
+CONECT   19   15
+CONECT   20    7
+CONECT   21    4
+CONECT   22    4
+CONECT   23   10
+CONECT   24   10
+END

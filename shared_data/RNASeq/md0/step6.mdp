@@ -1,0 +1,20 @@
+integrator              = steep
+emtol                   = 100.0 
+nsteps                  = 50000
+nstlist                 = 10
+cutoff-scheme           = Verlet
+rlist                   = 1.4
+vdwtype                 = Cut-off
+vdw-modifier            = Force-switch
+rvdw_switch             = 1.0
+rvdw                    = 1.4
+coulombtype             = PME
+rcoulomb                = 1.4
+;
+;constraints             = h-bonds
+;constraint_algorithm    = LINCS
+;
+gen-vel                 = yes
+gen-temp                = 303.15
+gen-seed                = -12345
+ld-seed                 = -136844430
